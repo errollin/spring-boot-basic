@@ -1,18 +1,14 @@
 package com.errol.springbootbasic.component;
 
-import com.errol.springbootbasic.service.impl.GreetingServiceImpl;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest
 class PropertyInjectedHandlerTest {
 
+    @Autowired
     PropertyInjectedHandler propertyInjectedHandler;
-
-    @BeforeEach
-    void setUp() {
-        this.propertyInjectedHandler = new PropertyInjectedHandler();
-        this.propertyInjectedHandler.greetingService = new GreetingServiceImpl();
-    }
 
     @Test
     void sayHello() {

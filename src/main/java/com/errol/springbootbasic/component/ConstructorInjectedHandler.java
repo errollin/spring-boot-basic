@@ -1,7 +1,9 @@
 package com.errol.springbootbasic.component;
 
 import com.errol.springbootbasic.service.GreetingService;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ConstructorInjectedHandler {
 
     private final GreetingService greetingService;
